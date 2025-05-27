@@ -1,0 +1,212 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GITHUB\\OrderTrack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\phoneusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\phoneusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\phoneusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\phoneusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\nameusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\nameusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\homepageusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\homepageusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\alamatusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\alamatusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\nameusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\nameusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\alamatusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\alamatusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\registerusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\registerusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\homepageusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\homepageusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|d:\\github\\ordertrack\\ordertrack\\view\\usercontrols\\registerusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B686B4B-F6F0-43B5-B75B-2FCBBD04C6C4}|OrderTrack\\OrderTrack.csproj|solutionrelative:ordertrack\\view\\usercontrols\\registerusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomePageUserControl.cs",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\HomePageUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\HomePageUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\HomePageUserControl.cs",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\HomePageUserControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:39:07.891Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterUserControl.cs",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\RegisterUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\RegisterUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\RegisterUserControl.cs",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\RegisterUserControl.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T03:35:59.443Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainView.cs",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\MainView.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\MainView.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\MainView.cs",
+              "RelativeToolTip": "OrderTrack\\view\\MainView.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA5wEIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:50:52.778Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "nameUserControl.cs",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\nameUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\nameUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\nameUserControl.cs",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\nameUserControl.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA2wB4AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:51:19.479Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "alamatUserControl.cs",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\alamatUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\alamatUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\alamatUserControl.cs",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\alamatUserControl.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwB0AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:07:47.66Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "phoneUserControl.cs",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\phoneUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\phoneUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\phoneUserControl.cs*",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\phoneUserControl.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBcAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:18:58.238Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "phoneUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\phoneUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\phoneUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\phoneUserControl.cs [Design]*",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\phoneUserControl.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:17:38.937Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "alamatUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\alamatUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\alamatUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\alamatUserControl.cs [Design]",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\alamatUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:04:02.262Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "nameUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\nameUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\nameUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\nameUserControl.cs [Design]",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\nameUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:46:24.506Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomePageUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\HomePageUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\HomePageUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\HomePageUserControl.cs [Design]",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\HomePageUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T06:45:31.71Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\RegisterUserControl.cs",
+              "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\RegisterUserControl.cs",
+              "ToolTip": "D:\\GITHUB\\OrderTrack\\OrderTrack\\view\\UserControls\\RegisterUserControl.cs [Design]",
+              "RelativeToolTip": "OrderTrack\\view\\UserControls\\RegisterUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T03:35:07.023Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
