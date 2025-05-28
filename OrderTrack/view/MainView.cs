@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderTrack.view.UserControls;
+using OrderTrack.utils;
 
 namespace OrderTrack.view
 {
@@ -22,7 +23,8 @@ namespace OrderTrack.view
         private void ShowInitialUserControl()
         {
             RegisterUserControl registerUserControl = new RegisterUserControl();
-
+            sideBar.Visible = false;
+            detail_pesanan.Visible = false;
             registerUserControl.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             ShowUserControl(registerUserControl);
         }
@@ -44,29 +46,47 @@ namespace OrderTrack.view
             pnlContent.Controls.Add(newControl);
             newControl.BringToFront();
         }
-        private void OnNavigateToUserControlRequested(object sender, UserControl requestedControl)
+        private void OnNavigateToUserControlRequested(object sender, NavigationEventArgs e)
         {
-            if (requestedControl is HomePageUserControl homepageUC)
+            sideBar.Visible = e.RequireSideBar;
+            detail_pesanan.Visible = e.RequireDetail;
+            if (e.userControl is HomePageUserControl homepageUC)
             {
                 homepageUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (requestedControl is RegisterUserControl registerUC)
+            if (e.userControl is RegisterUserControl registerUC)
             {
                 registerUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (requestedControl is nameUserControl nameUC)
+            if (e.userControl is nameUserControl nameUC)
             {
                 nameUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (requestedControl is alamatUserControl addressUC)
+            if (e.userControl is alamatUserControl addressUC)
             {
                 addressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (requestedControl is phoneUserControl phoneUC)
+            if (e.userControl is phoneUserControl phoneUC)
             {
                 phoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            ShowUserControl(requestedControl);
+            if (e.userControl is UC_produk UCproduk)
+            {
+                UCproduk.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+            }
+            if (e.userControl is UC_keranjang keranjangUC)
+            {
+                keranjangUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+            }
+            if (e.userControl is UC_confirmName confirmnameUC)
+            {
+                confirmnameUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+            }
+            if (e.userControl is UC_confirmAddress confirmAddressUC)
+            {
+                confirmAddressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+            }
+            ShowUserControl(e.userControl);
         }
     }
 }

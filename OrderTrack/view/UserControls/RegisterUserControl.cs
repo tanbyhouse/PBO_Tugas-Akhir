@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OrderTrack.utils;
 
 namespace OrderTrack.view.UserControls
 {
     public partial class RegisterUserControl : UserControl
     {
-        public event EventHandler<UserControl> NavigateToUserControlRequested;
+        public event EventHandler<NavigationEventArgs> NavigateToUserControlRequested;
         public RegisterUserControl()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace OrderTrack.view.UserControls
         {
             HomePageUserControl homePageUserControl = new HomePageUserControl();
 
-            NavigateToUserControlRequested?.Invoke(this, homePageUserControl);
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(homePageUserControl, false, false));
         }
     }
 }

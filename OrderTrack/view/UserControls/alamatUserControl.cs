@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OrderTrack.utils;
 
 namespace OrderTrack.view.UserControls
 {
     public partial class alamatUserControl : UserControl
     {
-        public EventHandler<UserControl> NavigateToUserControlRequested;
+        public EventHandler<NavigationEventArgs> NavigateToUserControlRequested;
         public alamatUserControl()
         {
             InitializeComponent();
@@ -21,13 +22,13 @@ namespace OrderTrack.view.UserControls
         private void btnBack_Click(object sender, EventArgs e)
         {
             nameUserControl namePage = new nameUserControl();
-            NavigateToUserControlRequested?.Invoke(this, namePage);
+            NavigateToUserControlRequested?.Invoke(this, new(namePage, false));
         }
 
         private void btnAlamat_Click(object sender, EventArgs e)
         {
             phoneUserControl phoneUserControl = new phoneUserControl();
-            NavigateToUserControlRequested?.Invoke(this, phoneUserControl);
+            NavigateToUserControlRequested?.Invoke(this, new(phoneUserControl, false, false));
         }
     }
 }

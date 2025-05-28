@@ -60,6 +60,7 @@
             btnKeranjang.TabIndex = 2;
             btnKeranjang.Text = "Keranjang";
             btnKeranjang.UseVisualStyleBackColor = true;
+            btnKeranjang.Click += btnKeranjang_Click;
             // 
             // HomePageUserControl
             // 

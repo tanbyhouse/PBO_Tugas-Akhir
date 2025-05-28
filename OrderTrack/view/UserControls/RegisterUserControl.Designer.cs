@@ -48,7 +48,7 @@
             panelSideBar.Dock = DockStyle.Left;
             panelSideBar.Location = new Point(0, 0);
             panelSideBar.Name = "panelSideBar";
-            panelSideBar.Size = new Size(250, 450);
+            panelSideBar.Size = new Size(215, 450);
             panelSideBar.TabIndex = 1;
             // 
             // RegisterUserControl

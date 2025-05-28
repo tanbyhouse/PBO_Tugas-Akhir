@@ -19,5 +19,17 @@
     <Compile Update="view\UserControls\RegisterUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="view\UserControls\UC_confirmAddress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="view\UserControls\UC_confirmName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="view\UserControls\UC_keranjang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="view\UserControls\UC_produk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

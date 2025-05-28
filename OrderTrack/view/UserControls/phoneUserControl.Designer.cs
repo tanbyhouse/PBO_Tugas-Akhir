@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             phonenumberBox = new TextBox();
-            btnAlamat = new Button();
+            btnProduct = new Button();
             btnBack = new Button();
             SuspendLayout();
             // 
@@ -43,14 +43,15 @@
             phonenumberBox.TabIndex = 0;
             phonenumberBox.Text = "PhoneNumber";
             // 
-            // btnAlamat
+            // btnProduct
             // 
-            btnAlamat.Location = new Point(396, 263);
-            btnAlamat.Name = "btnAlamat";
-            btnAlamat.Size = new Size(152, 43);
-            btnAlamat.TabIndex = 4;
-            btnAlamat.Text = "Next";
-            btnAlamat.UseVisualStyleBackColor = true;
+            btnProduct.Location = new Point(396, 263);
+            btnProduct.Name = "btnProduct";
+            btnProduct.Size = new Size(152, 43);
+            btnProduct.TabIndex = 4;
+            btnProduct.Text = "Next";
+            btnProduct.UseVisualStyleBackColor = true;
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnBack
             // 
@@ -66,7 +67,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnAlamat);
+            Controls.Add(btnProduct);
             Controls.Add(btnBack);
             Controls.Add(phonenumberBox);
             Name = "phoneUserControl";
@@ -78,7 +79,7 @@
         #endregion
 
         private TextBox phonenumberBox;
-        private Button btnAlamat;
+        private Button btnProduct;
         private Button btnBack;
     }
 }
