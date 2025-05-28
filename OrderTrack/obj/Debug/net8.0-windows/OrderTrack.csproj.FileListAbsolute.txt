@@ -30,3 +30,5 @@ D:\GITHUB\OrderTrack\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.csproj.Up2Da
 D:\GITHUB\OrderTrack\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_keranjang.resources
 D:\GITHUB\OrderTrack\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_confirmName.resources
 D:\GITHUB\OrderTrack\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_confirmAddress.resources
+D:\GITHUB\OrderTrack\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_confirmPhone.resources
+D:\GITHUB\OrderTrack\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.OrderConfirmPopUp.resources

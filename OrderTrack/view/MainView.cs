@@ -23,28 +23,56 @@ namespace OrderTrack.view
         private void ShowInitialUserControl()
         {
             RegisterUserControl registerUserControl = new RegisterUserControl();
-            sideBar.Visible = false;
-            detail_pesanan.Visible = false;
-            registerUserControl.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
-            ShowUserControl(registerUserControl);
+            OnNavigateToUserControlRequested(this, new NavigationEventArgs(registerUserControl, false, false, false));
         }
-        public void ShowUserControl(UserControl newControl)
+        public void ShowUserControl(UserControl newControl, bool isOverlay = false)
         {
             if (pnlContent == null)
             {
-                MessageBox.Show("Panel content is not initialized.");
+                MessageBox.Show("Error: pnlContent is not initialized.");
                 return;
             }
 
-            if (pnlContent.Controls.Count > 0)
+            if (!isOverlay) // Jika ini BUKAN overlay, hapus kontrol yang lama
             {
-                pnlContent.Controls[0].Dispose();
-                pnlContent.Controls.Clear();
+                // Ganti loop while dengan loop for yang lebih aman atau cukup hapus semua secara langsung
+                // Cara paling aman untuk menghapus semua kontrol:
+                while (pnlContent.Controls.Count > 0)
+                {
+                    // Ambil kontrol pertama, dispose, lalu hapus dari koleksi
+                    Control controlToRemove = pnlContent.Controls[0];
+                    pnlContent.Controls.RemoveAt(0);
+                    controlToRemove.Dispose(); // Penting untuk melepaskan sumber daya
+                }
+            }
+            else // Jika ini overlay
+            {
+                // Nonaktifkan UserControl di belakang overlay (jika ada)
+                if (pnlContent.Controls.Count > 0)
+                {
+                    // Asumsi UserControl yang utama ada di index 0
+                    pnlContent.Controls[0].Enabled = false;
+                }
+
+                // Hapus semua overlay yang mungkin sudah ada
+                // Loop mundur agar penghapusan tidak mengganggu indeks iterasi
+                for (int i = pnlContent.Controls.Count - 1; i >= 0; i--)
+                {
+                    // Hanya hapus jika itu adalah UserControl overlay (misal UC_OrderConfirmationPopup)
+                    // ATAU TransparentPanel yang kamu gunakan sebagai container overlay
+                    if (pnlContent.Controls[i] is OrderConfirmPopUp || pnlContent.Controls[i] is TransparentPanel)
+                    {
+                        Control controlToRemove = pnlContent.Controls[i];
+                        pnlContent.Controls.RemoveAt(i);
+                        controlToRemove.Dispose();
+                    }
+                }
             }
 
+            // Tambahkan kontrol baru
             newControl.Dock = DockStyle.Fill;
             pnlContent.Controls.Add(newControl);
-            newControl.BringToFront();
+            newControl.BringToFront(); // Pastikan kontrol baru di depan
         }
         private void OnNavigateToUserControlRequested(object sender, NavigationEventArgs e)
         {
@@ -54,37 +82,59 @@ namespace OrderTrack.view
             {
                 homepageUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is RegisterUserControl registerUC)
+            else if (e.userControl is RegisterUserControl registerUC)
             {
                 registerUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is nameUserControl nameUC)
+            else if (e.userControl is nameUserControl nameUC)
             {
                 nameUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is alamatUserControl addressUC)
+            else if (e.userControl is alamatUserControl addressUC)
             {
                 addressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is phoneUserControl phoneUC)
+            else if (e.userControl is phoneUserControl phoneUC)
             {
                 phoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is UC_produk UCproduk)
+            else if (e.userControl is UC_produk UCproduk)
             {
                 UCproduk.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is UC_keranjang keranjangUC)
+            else if (e.userControl is UC_keranjang keranjangUC)
             {
                 keranjangUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is UC_confirmName confirmnameUC)
+            else if (e.userControl is UC_confirmName confirmnameUC)
             {
                 confirmnameUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            if (e.userControl is UC_confirmAddress confirmAddressUC)
+            else if (e.userControl is UC_confirmAddress confirmAddressUC)
             {
                 confirmAddressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+            }
+            else if (e.userControl is UC_confirmPhone confirmPhoneUC)
+            {
+                confirmPhoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+            }
+            else if (e.userControl is OrderConfirmPopUp popupUC)
+            {
+                popupUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+                // PENTING: Tambahkan handler untuk event PopupClosed dari overlay
+                popupUC.PopupClosed += (s, args) =>
+                {
+                    // Hapus overlay dari pnlContent
+                    pnlContent.Controls.Remove(popupUC);
+                    popupUC.Dispose();
+
+                    // Aktifkan kembali UserControl di belakangnya (jika sebelumnya dinonaktifkan)
+                    if (pnlContent.Controls.Count > 0)
+                    {
+                        // Asumsi UserControl utama ada di index 0
+                        pnlContent.Controls[0].Enabled = true;
+                    }
+                };
             }
             ShowUserControl(e.userControl);
         }

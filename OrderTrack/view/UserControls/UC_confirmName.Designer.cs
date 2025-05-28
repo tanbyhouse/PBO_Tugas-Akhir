@@ -56,6 +56,7 @@
             btnNext.TabIndex = 3;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // btnBack
             // 
@@ -74,6 +75,7 @@
             confirmNameBox.Name = "confirmNameBox";
             confirmNameBox.Size = new Size(271, 34);
             confirmNameBox.TabIndex = 1;
+            confirmNameBox.Text = "Nama";
             // 
             // label1
             // 

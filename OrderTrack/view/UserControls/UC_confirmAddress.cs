@@ -18,5 +18,17 @@ namespace OrderTrack.view.UserControls
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            UC_confirmName confirmName = new UC_confirmName();
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(confirmName, false, true));
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            UC_confirmPhone uC_ConfirmPhone = new UC_confirmPhone();
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(uC_ConfirmPhone, false, true));
+        }
     }
 }

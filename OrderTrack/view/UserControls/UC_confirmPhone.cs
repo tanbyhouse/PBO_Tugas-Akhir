@@ -11,25 +11,24 @@ using OrderTrack.utils;
 
 namespace OrderTrack.view.UserControls
 {
-    public partial class UC_confirmName : UserControl
+    public partial class UC_confirmPhone : UserControl
     {
         public EventHandler<NavigationEventArgs> NavigateToUserControlRequested;
-        public UC_confirmName()
+        public UC_confirmPhone()
         {
             InitializeComponent();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            UC_keranjang keranjang = new UC_keranjang();
-
-            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(keranjang, true, true));
+            UC_confirmAddress uC_ConfirmAddress = new UC_confirmAddress();
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(uC_ConfirmAddress, false, true));
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            UC_confirmAddress alamat = new UC_confirmAddress();
-            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(alamat, false, true));
+            OrderConfirmPopUp popUp = new OrderConfirmPopUp();
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(popUp, false, false, true));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace OrderTrack.view.UserControls
 {
-    partial class UC_confirmAddress
+    partial class UC_confirmPhone
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            addressconfirmPanel = new Panel();
+            phoneconfirmPanel = new Panel();
             btnNext = new Button();
             btnBack = new Button();
-            confirmAddressBox = new TextBox();
+            confirmPhoneBox = new TextBox();
             label1 = new Label();
-            addressconfirmPanel.SuspendLayout();
+            phoneconfirmPanel.SuspendLayout();
             SuspendLayout();
             // 
-            // addressconfirmPanel
+            // phoneconfirmPanel
             // 
-            addressconfirmPanel.Controls.Add(btnNext);
-            addressconfirmPanel.Controls.Add(btnBack);
-            addressconfirmPanel.Controls.Add(confirmAddressBox);
-            addressconfirmPanel.Controls.Add(label1);
-            addressconfirmPanel.Dock = DockStyle.Left;
-            addressconfirmPanel.Location = new Point(0, 0);
-            addressconfirmPanel.Name = "addressconfirmPanel";
-            addressconfirmPanel.Size = new Size(438, 450);
-            addressconfirmPanel.TabIndex = 1;
+            phoneconfirmPanel.Controls.Add(btnNext);
+            phoneconfirmPanel.Controls.Add(btnBack);
+            phoneconfirmPanel.Controls.Add(confirmPhoneBox);
+            phoneconfirmPanel.Controls.Add(label1);
+            phoneconfirmPanel.Dock = DockStyle.Left;
+            phoneconfirmPanel.Location = new Point(0, 0);
+            phoneconfirmPanel.Name = "phoneconfirmPanel";
+            phoneconfirmPanel.Size = new Size(438, 450);
+            phoneconfirmPanel.TabIndex = 2;
             // 
             // btnNext
             // 
@@ -68,14 +68,14 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
-            // confirmAddressBox
+            // confirmPhoneBox
             // 
-            confirmAddressBox.Location = new Point(87, 246);
-            confirmAddressBox.Multiline = true;
-            confirmAddressBox.Name = "confirmAddressBox";
-            confirmAddressBox.Size = new Size(271, 34);
-            confirmAddressBox.TabIndex = 1;
-            confirmAddressBox.Text = "Alamat";
+            confirmPhoneBox.Location = new Point(87, 246);
+            confirmPhoneBox.Multiline = true;
+            confirmPhoneBox.Name = "confirmPhoneBox";
+            confirmPhoneBox.Size = new Size(271, 34);
+            confirmPhoneBox.TabIndex = 1;
+            confirmPhoneBox.Text = "Phone";
             // 
             // label1
             // 
@@ -86,24 +86,24 @@
             label1.TabIndex = 0;
             label1.Text = "Checkout";
             // 
-            // UC_confirmAddress
+            // UC_confirmPhone
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(addressconfirmPanel);
-            Name = "UC_confirmAddress";
+            Controls.Add(phoneconfirmPanel);
+            Name = "UC_confirmPhone";
             Size = new Size(800, 450);
-            addressconfirmPanel.ResumeLayout(false);
-            addressconfirmPanel.PerformLayout();
+            phoneconfirmPanel.ResumeLayout(false);
+            phoneconfirmPanel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel addressconfirmPanel;
+        private Panel phoneconfirmPanel;
         private Button btnNext;
         private Button btnBack;
-        private TextBox confirmAddressBox;
+        private TextBox confirmPhoneBox;
         private Label label1;
     }
 }

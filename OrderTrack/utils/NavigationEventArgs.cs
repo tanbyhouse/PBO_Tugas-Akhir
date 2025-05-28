@@ -11,11 +11,13 @@ namespace OrderTrack.utils
         public UserControl userControl { get; }
         public bool RequireSideBar { get; }
         public bool RequireDetail { get; }
-        public NavigationEventArgs(UserControl userControl, bool requireSideBar = false, bool requireDetail = false)
+        public bool IsOverLay { get; }
+        public NavigationEventArgs(UserControl userControl, bool requireSideBar = false, bool requireDetail = false, bool isOverLay = false)
         {
             this.userControl = userControl;
             RequireSideBar = requireSideBar;
             RequireDetail = requireDetail;
+            IsOverLay = isOverLay;
         }
     }
 }
