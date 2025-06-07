@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GITHUB\\OrderTrack\\OrderTrack\\OrderTrack.csproj": {}
+    "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj": {}
   },
   "projects": {
-    "D:\\GITHUB\\OrderTrack\\OrderTrack\\OrderTrack.csproj": {
+    "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GITHUB\\OrderTrack\\OrderTrack\\OrderTrack.csproj",
+        "projectUniqueName": "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj",
         "projectName": "OrderTrack",
-        "projectPath": "D:\\GITHUB\\OrderTrack\\OrderTrack\\OrderTrack.csproj",
-        "packagesPath": "C:\\Users\\ZAFARELL\\.nuget\\packages\\",
-        "outputPath": "D:\\GITHUB\\OrderTrack\\OrderTrack\\obj\\",
+        "projectPath": "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ZAFARELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
