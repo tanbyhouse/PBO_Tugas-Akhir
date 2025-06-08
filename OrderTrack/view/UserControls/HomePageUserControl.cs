@@ -17,6 +17,10 @@ namespace OrderTrack.view.UserControls
         public HomePageUserControl()
         {
             InitializeComponent();
+
+            btnBuatPesanan.BackColor = ColorTranslator.FromHtml("#FEF8DF");
+            btnPesanan.BackColor = ColorTranslator.FromHtml("#D2B48C");
+            btnKeranjang.BackColor = ColorTranslator.FromHtml("#D2B48C");
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
