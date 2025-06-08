@@ -33,7 +33,7 @@ namespace OrderTrack.view
                 return;
             }
 
-            if (!isOverlay) // Jika ini BUKAN overlay, hapus kontrol yang lama
+            if (isOverlay) // Jika ini BUKAN overlay, hapus kontrol yang lama
             {
                 // Ganti loop while dengan loop for yang lebih aman atau cukup hapus semua secara langsung
                 // Cara paling aman untuk menghapus semua kontrol:
@@ -136,7 +136,7 @@ namespace OrderTrack.view
                     }
                 };
             }
-            ShowUserControl(e.userControl);
+            ShowUserControl(e.userControl, e.IsOverLay);
         }
     }
 }

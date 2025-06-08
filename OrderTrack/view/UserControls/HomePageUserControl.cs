@@ -23,10 +23,12 @@ namespace OrderTrack.view.UserControls
             btnKeranjang.BackColor = ColorTranslator.FromHtml("#D2B48C");
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void btnBuatPesanan_Click(object sender, EventArgs e)
         {
-            nameUserControl pageNama = new nameUserControl();
-            NavigateTouserControlRequested?.Invoke(this, new(pageNama, false, false));
+            //nameUserControl pageNama = new nameUserControl();
+            //NavigateTouserControlRequested?.Invoke(this, new(pageNama, false, false));
+            UC_produk uC_Produk = new UC_produk();
+            NavigateTouserControlRequested?.Invoke(this, new NavigationEventArgs(uC_Produk, false, false, false));
         }
 
         private void btnKeranjang_Click(object sender, EventArgs e)

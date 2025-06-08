@@ -28,7 +28,7 @@ namespace OrderTrack.view.UserControls
         private void btnProduct_Click(object sender, EventArgs e)
         {
             UC_produk listProduk = new UC_produk();
-            NavigateToUserControlRequested?.Invoke(this, new(listProduk, false, false));
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs (listProduk, false, false));
         }
     }
 }

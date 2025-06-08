@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj": {}
+    "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj": {}
   },
   "projects": {
-    "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj": {
+    "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj",
+        "projectUniqueName": "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj",
         "projectName": "OrderTrack",
-        "projectPath": "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\OrderTrack.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\KULIAH\\PBO\\DemoFlow-OrderTrack\\OrderTrack\\obj\\",
+        "projectPath": "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj",
+        "packagesPath": "C:\\Users\\ZAFARELL\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ZAFARELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,6 +53,24 @@
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.4.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -74,7 +92,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
