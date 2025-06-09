@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OrderTrack.Models;
+namespace OrderTrack.Models_s;
 
 public partial class DetailPesanan
 {
@@ -17,7 +17,7 @@ public partial class DetailPesanan
 
     public decimal TotalHargaItem { get; set; }
 
-    public virtual Brownies IdBrowniesNavigation { get; set; } = null!;
+    public virtual Browny IdBrowniesNavigation { get; set; } = null!;
 
     public virtual Pesanan IdPesananNavigation { get; set; } = null!;
 }

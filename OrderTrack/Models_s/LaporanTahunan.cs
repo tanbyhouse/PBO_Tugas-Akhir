@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OrderTrack.Models;
+namespace OrderTrack.Models_s;
 
 public partial class LaporanTahunan
 {

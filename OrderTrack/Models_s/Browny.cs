@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OrderTrack.Models;
+namespace OrderTrack.Models_s;
 
-public partial class Brownies
+public partial class Browny
 {
     public int IdBrownies { get; set; }
 
@@ -18,8 +19,11 @@ public partial class Brownies
     public decimal HargaBrownies { get; set; }
 
     public string? Deskripsi { get; set; }
+    
+    [Column("gambar_path")]
+    public string? GambarPath { get; set; }
 
     public virtual ICollection<DetailPesanan> DetailPesanans { get; set; } = new List<DetailPesanan>();
 
-    public virtual VarianBrownies IdVarianNavigation { get; set; } = null!;
+    public virtual VarianBrowny IdVarianNavigation { get; set; } = null!;
 }

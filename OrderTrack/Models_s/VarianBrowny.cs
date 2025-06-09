@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OrderTrack.Models;
+namespace OrderTrack.Models_s;
 
-public partial class VarianBrownies
+public partial class VarianBrowny
 {
     public int IdVarian { get; set; }
 
@@ -11,5 +11,5 @@ public partial class VarianBrownies
 
     public string? DeskripsiVarian { get; set; }
 
-    public virtual ICollection<Brownies> Brownies { get; set; } = new List<Brownies>();
+    public virtual ICollection<Browny> Brownies { get; set; } = new List<Browny>();
 }

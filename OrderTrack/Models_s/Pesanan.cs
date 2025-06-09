@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OrderTrack.Models;
+namespace OrderTrack.Models_s;
 
 public partial class Pesanan
 {
@@ -10,8 +10,6 @@ public partial class Pesanan
     public int IdPelanggan { get; set; }
 
     public DateOnly TanggalPesanan { get; set; }
-
-    public StatusPesanan StatusPesanan { get; set; }
 
     public virtual ICollection<DetailPesanan> DetailPesanans { get; set; } = new List<DetailPesanan>();
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OrderTrack.Models;
+namespace OrderTrack.Models_s;
 
 public partial class Pelanggan
 {
@@ -12,7 +12,6 @@ public partial class Pelanggan
     public string AlamatPelanggan { get; set; } = null!;
 
     public string NomorHp { get; set; } = null!;
-    public StatusPelanggan StatusPelanggan { get; set; }
 
     public virtual ICollection<Pesanan> Pesanans { get; set; } = new List<Pesanan>();
 }

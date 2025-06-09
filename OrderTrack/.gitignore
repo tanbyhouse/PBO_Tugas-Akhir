@@ -1,0 +1,66 @@
+﻿appsettings.json
+google-service.json
+# Ignore the build output directory
+bin/
+# Ignore the NuGet packages directory
+obj/
+# Ignore the user secrets file
+secrets.json
+# Ignore the Visual Studio Code workspace settings
+.vscode/
+# Ignore the Rider workspace settings
+.idea/
+# Ignore the Visual Studio solution user options
+*.suo
+# Ignore the Visual Studio Code workspace storage
+.vscode/.storage/
+# Ignore the Visual Studio Code extensions
+.vscode/extensions.json
+# Ignore the Visual Studio Code tasks
+.vscode/tasks.json
+# Ignore the Visual Studio Code launch configurations
+.vscode/launch.json
+# Ignore the Visual Studio Code settings
+.vscode/settings.json
+# Ignore the Visual Studio Code snippets
+.vscode/snippets/
+# Ignore the Visual Studio Code keybindings
+.vscode/keybindings.json
+# Ignore the Visual Studio Code workspace state
+.vscode/workspaceStorage/
+# Ignore the Visual Studio Code workspace cache
+.vscode/.cache/
+# Ignore the Visual Studio Code workspace logs
+.vscode/logs/
+# Ignore the Visual Studio Code workspace extensions
+.vscode/extensions/
+# Ignore the Visual Studio Code workspace backups
+.vscode/backups/
+# Ignore the Visual Studio Code workspace history
+.vscode/history/
+# Ignore the Visual Studio Code workspace tasks
+.vscode/tasks/
+# Ignore the Visual Studio Code workspace launch configurations
+.vscode/launch/
+# Ignore the Visual Studio Code workspace settings
+.vscode/settings/
+# Ignore the Visual Studio Code workspace snippets
+.vscode/snippets/
+# Ignore the Visual Studio Code workspace keybindings
+.vscode/keybindings/
+# Ignore the Visual Studio Code workspace state
+.vscode/workspaceState/
+# Ignore the Visual Studio Code workspace cache
+.vscode/.cache/
+# Ignore the Visual Studio Code workspace logs
+.vscode/logs/
+# Ignore the Visual Studio Code workspace extensions
+.vscode/extensions/
+# Ignore the Visual Studio Code workspace backups
+.vscode/backups/
+# Ignore the Visual Studio Code workspace history
+.vscode/history/
+# Ignore the Visual Studio Code workspace tasks
+# Ignore the Visual Studio Code workspace launch configurations
+# Ignore the Visual Studio Code workspace settings
+Data/
