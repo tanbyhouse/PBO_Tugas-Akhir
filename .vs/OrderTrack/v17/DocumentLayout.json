@@ -317,7 +317,7 @@
               "RelativeDocumentMoniker": "OrderTrack\\view\\UserControls\\UC_produk.cs",
               "ToolTip": "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrack\\view\\UserControls\\UC_produk.cs",
               "RelativeToolTip": "OrderTrack\\view\\UserControls\\UC_produk.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAQwEIAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAA4wIIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-08T08:12:16.326Z",
               "IsPinned": true,
@@ -575,8 +575,7 @@
               "RelativeToolTip": "OrderTrack\\utils\\RoundedPanel.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwHsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T17:21:03.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T17:21:03.725Z"
             },
             {
               "$type": "Document",

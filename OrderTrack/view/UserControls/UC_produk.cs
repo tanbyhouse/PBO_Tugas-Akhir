@@ -61,15 +61,17 @@ namespace OrderTrack.view.UserControls
             string imageBasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images");
             foreach (var brownies in brownieslist)
             {
+                /* INI GATAU AKU JIR CARANYA BIAR ROUNDED GIMANA 
+                soalnya bentuk kotaknya lancip*/
                 //Panel productPanel = new Panel();
                 RoundedPanel productPanel = new RoundedPanel();
-                productPanel.CornerRadius = 15; // Contoh radius
-                productPanel.BorderColor = Color.White; // Agar terlihat jelas saat debugging
-                productPanel.BorderThickness = 2; // Agar terlihat jelas saat debugging
+                productPanel.CornerRadius = 15; 
+                productPanel.BorderColor = Color.White;
+                productPanel.BorderThickness = 2; 
                 productPanel.Size = new Size(180, 270);
-                productPanel.BorderStyle = BorderStyle.None; // Penting!
+                productPanel.BorderStyle = BorderStyle.None; 
                 productPanel.Margin = new Padding(10);
-                productPanel.BackColor = Color.White; // Atur warna latar belakang yang Anda inginkan
+                productPanel.BackColor = Color.Red; 
                 productPanel.Tag = brownies;
 
                 PictureBox pictureBox = new PictureBox();
