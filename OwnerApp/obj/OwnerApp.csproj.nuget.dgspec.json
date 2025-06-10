@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj": {}
+    "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OwnerApp\\OwnerApp.csproj": {}
   },
   "projects": {
-    "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj": {
+    "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OwnerApp\\OwnerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj",
-        "projectName": "OrderTrack",
-        "projectPath": "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OrderTrack\\OrderTrack.csproj",
+        "projectUniqueName": "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OwnerApp\\OwnerApp.csproj",
+        "projectName": "OwnerApp",
+        "projectPath": "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OwnerApp\\OwnerApp.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OrderTrack\\obj\\",
+        "outputPath": "D:\\KULIAH\\PBO\\PBO_Tugas-Akhir\\OwnerApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio\\Shared\\NuGetPackages"
@@ -49,30 +49,6 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "dependencies": {
-            "Guna.UI2.WinForms": {
-              "target": "Package",
-              "version": "[2.0.4.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.5, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[9.0.5, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[9.0.5, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
