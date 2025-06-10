@@ -22,8 +22,8 @@ namespace OrderTrack.view
         }
         private void ShowInitialUserControl()
         {
-            RegisterUserControl registerUserControl = new RegisterUserControl();
-            OnNavigateToUserControlRequested(this, new NavigationEventArgs(registerUserControl, false, false, false));
+            HomePageUserControl homePageUserControl = new HomePageUserControl();
+            OnNavigateToUserControlRequested(this, new NavigationEventArgs(homePageUserControl, false, false, false));
         }
         public void ShowUserControl(UserControl newControl, bool isOverlay = false)
         {
@@ -76,27 +76,11 @@ namespace OrderTrack.view
         }
         private void OnNavigateToUserControlRequested(object sender, NavigationEventArgs e)
         {
-            sideBar.Visible = e.RequireSideBar;
+            //sideBar.Visible = e.RequireSideBar;
             detail_pesanan.Visible = e.RequireDetail;
             if (e.userControl is HomePageUserControl homepageUC)
             {
                 homepageUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is RegisterUserControl registerUC)
-            {
-                registerUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is nameUserControl nameUC)
-            {
-                nameUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is alamatUserControl addressUC)
-            {
-                addressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is phoneUserControl phoneUC)
-            {
-                phoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
             else if (e.userControl is UC_produk UCproduk)
             {
