@@ -31,7 +31,6 @@ namespace OrderTrack.view.UserControls
             this.panel1.Controls.Clear();
 
             List<Browny> brownieslist = new List<Browny>();
-            
             try
             {
                 brownieslist = await _dbcontext.Brownies.ToListAsync();
