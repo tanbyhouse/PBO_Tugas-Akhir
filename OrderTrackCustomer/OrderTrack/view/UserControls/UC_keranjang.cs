@@ -17,8 +17,13 @@ namespace OrderTrack.view.UserControls
         public UC_keranjang()
         {
             InitializeComponent();
+            LoadKeranjangItems();
         }
-
+        private void LoadKeranjangItems()
+        {
+            var items = UC_produk.GetKeranjangItems();
+            var quantities = UC_produk.GetQuantityKeranjang();
+        }
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             UC_confirmName uC_ConfirmName = new UC_confirmName();
