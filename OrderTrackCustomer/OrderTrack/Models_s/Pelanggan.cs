@@ -12,6 +12,7 @@ public partial class Pelanggan
     public string AlamatPelanggan { get; set; } = null!;
 
     public string NomorHp { get; set; } = null!;
+    public string StatusPelanggan { get; set; }
 
     public virtual ICollection<Pesanan> Pesanans { get; set; } = new List<Pesanan>();
 }

@@ -261,12 +261,9 @@ D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\bin\Debug\
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.csproj.AssemblyReference.cache
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.Properties.Resources.resources
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.MainView.resources
-D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.alamatUserControl.resources
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.HomePageUserControl.resources
-D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.nameUserControl.resources
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.OrderConfirmPopUp.resources
-D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.phoneUserControl.resources
-D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.RegisterUserControl.resources
+D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.QuantityBox.resources
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_confirmAddress.resources
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_confirmName.resources
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_confirmPhone.resources
@@ -284,3 +281,4 @@ D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.pdb
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.genruntimeconfig.cache
 D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\ref\OrderTrack.dll
+D:\GITHUB\OrderTrackFix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_KeranjangConfirm.resources

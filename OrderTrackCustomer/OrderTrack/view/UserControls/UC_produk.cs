@@ -28,7 +28,7 @@ namespace OrderTrack.view.UserControls
         }
         private async void LoadProdukData()
         {
-            this.panel1.Controls.Clear();
+            this.flowPanel_product.Controls.Clear();
 
             List<Browny> brownieslist = new List<Browny>();
             try
@@ -42,19 +42,19 @@ namespace OrderTrack.view.UserControls
                 return;
             }
 
-            if (brownieslist == null || !brownieslist.Any()) 
+            if (brownieslist == null || !brownieslist.Any())
             {
                 Label lblNoData = new Label();
                 lblNoData.Text = "Maaf, data produk belum tersedia.";
                 lblNoData.Font = new Font("Segoe UI", 14, FontStyle.Bold);
                 lblNoData.AutoSize = true;
-                lblNoData.TextAlign = ContentAlignment.MiddleCenter; 
-                this.tableLayoutPanel1.Controls.Add(lblNoData); 
+                lblNoData.TextAlign = ContentAlignment.MiddleCenter;
+                this.tableLayoutPanel1.Controls.Add(lblNoData);
                 lblNoData.Anchor = AnchorStyles.None;
 
                 this.panel1.Controls.Add(this.tableLayoutPanel1);
 
-                return; 
+                return;
             }
 
             string imageBasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images");
@@ -64,18 +64,18 @@ namespace OrderTrack.view.UserControls
                 soalnya bentuk kotaknya lancip*/
                 //Panel productPanel = new Panel();
                 RoundedPanel productPanel = new RoundedPanel();
-                productPanel.CornerRadius = 15; 
+                productPanel.CornerRadius = 15;
                 productPanel.BorderColor = Color.White;
-                productPanel.BorderThickness = 2; 
-                productPanel.Size = new Size(180, 270);
-                productPanel.BorderStyle = BorderStyle.None; 
+                productPanel.BorderThickness = 2;
+                productPanel.Size = new Size(180, 290);
+                productPanel.BorderStyle = BorderStyle.None;
                 productPanel.Margin = new Padding(10);
-                productPanel.BackColor = Color.Red; 
+                productPanel.BackColor = Color.White;
                 productPanel.Tag = brownies;
 
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Size = new Size(160, 140);
-                pictureBox.BackColor = Color.Transparent;
+                pictureBox.BackColor = Color.White;
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBox.Location = new Point(10, 10);
 
@@ -119,12 +119,17 @@ namespace OrderTrack.view.UserControls
                 //btnDetail.BackColor = Color.FromArgb(210, 180, 140);
                 btnDetail.Click += (sender, e) => ShowProductDetail(brownies);
 
+                QuantityBox quantityBox = new QuantityBox();
+                quantityBox.Location = new Point(5, 250);
+
                 productPanel.Controls.Add(pictureBox);
                 productPanel.Controls.Add(lblNama);
                 productPanel.Controls.Add(lblHarga);
                 productPanel.Controls.Add(btnDetail);
+                productPanel.Controls.Add(quantityBox);
 
-                panel1.Controls.Add(productPanel);
+
+                flowPanel_product.Controls.Add(productPanel);
             }
         }
         private void ShowProductDetail(Browny selectedBrownies)
@@ -185,16 +190,16 @@ namespace OrderTrack.view.UserControls
 
             detailForm.ShowDialog();
         }
-
-        private void btnKeranjang_Click(object sender, EventArgs e)
-        {
-            UC_keranjang keranjang = new UC_keranjang();
-
-            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(keranjang, true, true));
-        }
         private void btnMakeOrder_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Pesanan telah masuk ke keranjang silahkan cek keranjang anda", "Pesanan Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnKeranjang_Click(object sender, EventArgs e)
+        {
+            UC_KeranjangConfirm _KeranjangConfirm = new UC_KeranjangConfirm();
+
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(_KeranjangConfirm, false, false, false));
         }
     }
 }

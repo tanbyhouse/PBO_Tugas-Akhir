@@ -33,9 +33,9 @@ namespace OrderTrack.view.UserControls
 
         private void btnKeranjang_Click(object sender, EventArgs e)
         {
-            UC_keranjang uC_Keranjang = new UC_keranjang();
+            UC_KeranjangConfirm uC_Keranjang = new UC_KeranjangConfirm();
 
-            NavigateTouserControlRequested?.Invoke(this, new(uC_Keranjang, true, true));
+            NavigateTouserControlRequested?.Invoke(this, new(uC_Keranjang, false, false));
         }
     }
 }

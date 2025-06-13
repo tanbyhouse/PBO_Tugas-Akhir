@@ -22,8 +22,8 @@ namespace OrderTrack.view
         }
         private void ShowInitialUserControl()
         {
-            RegisterUserControl registerUserControl = new RegisterUserControl();
-            OnNavigateToUserControlRequested(this, new NavigationEventArgs(registerUserControl, false, false, false));
+            HomePageUserControl homePage = new HomePageUserControl();
+            OnNavigateToUserControlRequested(this, new NavigationEventArgs(homePage, false, false, false));
         }
         public void ShowUserControl(UserControl newControl, bool isOverlay = false)
         {
@@ -82,22 +82,6 @@ namespace OrderTrack.view
             {
                 homepageUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is RegisterUserControl registerUC)
-            {
-                registerUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is nameUserControl nameUC)
-            {
-                nameUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is alamatUserControl addressUC)
-            {
-                addressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is phoneUserControl phoneUC)
-            {
-                phoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
-            }
             else if (e.userControl is UC_produk UCproduk)
             {
                 UCproduk.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
@@ -117,6 +101,10 @@ namespace OrderTrack.view
             else if (e.userControl is UC_confirmPhone confirmPhoneUC)
             {
                 confirmPhoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+            }
+            else if(e.userControl is UC_KeranjangConfirm keranjangConfirm)
+            {
+                keranjangConfirm.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
             else if (e.userControl is OrderConfirmPopUp popupUC)
             {

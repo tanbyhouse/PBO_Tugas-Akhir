@@ -187,6 +187,7 @@ public partial class AppDbContext_s : DbContext
                 .HasDefaultValueSql("CURRENT_DATE")
                 .HasColumnName("tanggal_pesanan");
 
+
             entity.HasOne(d => d.IdPelangganNavigation).WithMany(p => p.Pesanans)
                 .HasForeignKey(d => d.IdPelanggan)
                 .OnDelete(DeleteBehavior.Restrict)
@@ -207,6 +208,14 @@ public partial class AppDbContext_s : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("nama_varian");
         });
+        modelBuilder.Entity<Pelanggan>()
+            .Property(e => e.StatusPelanggan)
+            .HasConversion<string>(); // Ini penting untuk Npgsql agar disimpan sebagai string
+
+        // Konfigurasi untuk enum StatusPesanan
+        modelBuilder.Entity<Pesanan>()
+            .Property(e => e.StatusPesanan)
+            .HasConversion<string>();
 
         OnModelCreatingPartial(modelBuilder);
     }

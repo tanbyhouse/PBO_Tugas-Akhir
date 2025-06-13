@@ -21,7 +21,7 @@ namespace OrderTrack.view.UserControls
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            UC_keranjang keranjang = new UC_keranjang();
+            UC_KeranjangConfirm keranjang = new UC_KeranjangConfirm();
 
             NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(keranjang, true, true));
         }
@@ -29,7 +29,7 @@ namespace OrderTrack.view.UserControls
         private void btnNext_Click(object sender, EventArgs e)
         {
             UC_confirmAddress alamat = new UC_confirmAddress();
-            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(alamat, false, true));
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(alamat, false, false));
         }
     }
 }
