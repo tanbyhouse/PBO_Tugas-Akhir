@@ -12,6 +12,7 @@ using OrderTrack.utils;
 using OrderTrack.view.UserControls;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace OrderTrack.view.UserControls
 {
 
@@ -19,6 +20,17 @@ namespace OrderTrack.view.UserControls
     {
         private readonly AppDbContext_s _dbcontext;
         public EventHandler<NavigationEventArgs> NavigateToUserControlRequested;
+        
+        private static List<Browny> _keranjangItems = new List<Browny>();
+        private static Dictionary<int, int> _quantityKeranjang = new Dictionary<int, int>();
+        private Dictionary<int, QuantityBox> _quantityControls = new();
+        public static void ClearKeranjang()
+        {
+            _keranjangItems.Clear();
+            _quantityKeranjang.Clear();
+        }
+        //public List<KeranjangItem> keranjangItems = new List<KeranjangItem>();
+
         public UC_produk()
         {
             InitializeComponent();
@@ -65,19 +77,19 @@ namespace OrderTrack.view.UserControls
                 //Panel productPanel = new Panel();
                 RoundedPanel productPanel = new RoundedPanel();
                 productPanel.CornerRadius = 15; 
-                productPanel.BorderColor = Color.White;
-                productPanel.BorderThickness = 2; 
+                productPanel.BorderColor = ColorTranslator.FromHtml("#e8e3cf");
+                productPanel.BorderThickness = 1; 
                 productPanel.Size = new Size(180, 270);
                 productPanel.BorderStyle = BorderStyle.None; 
                 productPanel.Margin = new Padding(10);
-                productPanel.BackColor = Color.Red; 
+                productPanel.BackColor = ColorTranslator.FromHtml("#e8e3cf");
                 productPanel.Tag = brownies;
 
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Size = new Size(160, 140);
                 pictureBox.BackColor = Color.Transparent;
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBox.Location = new Point(10, 10);
+                pictureBox.Location = new Point(10, 30);
 
                 string fullImagePath = Path.Combine(imageBasePath, brownies.GambarPath);
                 if (File.Exists(fullImagePath))
@@ -99,23 +111,35 @@ namespace OrderTrack.view.UserControls
 
                 Label lblNama = new Label();
                 lblNama.Text = brownies.NamaBrownies;
-                lblNama.Location = new Point(5, 160);
-                lblNama.AutoSize = true;
-                lblNama.BackColor = Color.Transparent;
-                lblNama.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                lblNama.MaximumSize = new Size(170, 0);
+                //lblNama.Location = new Point(5, 160);
+                //lblNama.AutoSize = true;
+                lblNama.BackColor = Color.Tan;
+                lblNama.Font = new Font("Gilroy-Bold", 10, FontStyle.Bold);
+                //lblNama.MaximumSize = new Size(170, 0);
+                lblNama.TextAlign = ContentAlignment.MiddleCenter;
+                lblNama.Size = new Size(productPanel.Width, 30);
+                //lblNama.Location = new Point(0, 0);
 
                 Label lblHarga = new Label();
                 lblHarga.Text = $"Rp. {brownies.HargaBrownies:N0}";
-                lblHarga.Location = new Point(5, 185);
+                lblHarga.TextAlign = ContentAlignment.MiddleCenter;
+                //lblHarga.Location = new Point(25, 185);
+                lblHarga.Location = new Point((productPanel.Width - lblHarga.PreferredWidth) / 2, 170);
                 lblHarga.AutoSize = true;
                 lblHarga.BackColor = Color.Transparent;
-                lblHarga.Font = new Font("Segoe UI", 9, FontStyle.Regular);
+                lblHarga.Font = new Font("Gilroy-Medium", 9, FontStyle.Regular);
 
                 Button btnDetail = new Button();
+                btnDetail.BackColor = Color.Tan;
+                btnDetail.FlatStyle = FlatStyle.Flat;
+                btnDetail.FlatAppearance.BorderSize = 0;
+                btnDetail.ForeColor = ColorTranslator.FromHtml("#4D3B2F");
+                btnDetail.Font = new Font("Gilroy-Bold", 10, FontStyle.Regular);
+                btnDetail.Location = new Point(0, 195);
+                btnDetail.Size = new Size(productPanel.Width, 30);
                 btnDetail.Text = "Detail Produk";
-                btnDetail.Location = new Point(5, 215);
-                btnDetail.Size = new Size(100, 25);
+                //btnDetail.Location = new Point(5, 215);
+                //btnDetail.Size = new Size(100, 25);
                 //btnDetail.BackColor = Color.FromArgb(210, 180, 140);
                 btnDetail.Click += (sender, e) => ShowProductDetail(brownies);
 
@@ -125,7 +149,18 @@ namespace OrderTrack.view.UserControls
                 productPanel.Controls.Add(btnDetail);
 
                 panel1.Controls.Add(productPanel);
+
+                QuantityBox quantityBox = new QuantityBox();
+                quantityBox.Minimum = 0;
+                quantityBox.Maximum = 200;
+                quantityBox.Value = 0;
+                quantityBox.Location = new Point(15, 232);
+                quantityBox.Name = "quantityBox_" + brownies.IdBrownies;
+
+                _quantityControls[brownies.IdBrownies] = quantityBox;
+                productPanel.Controls.Add(quantityBox);
             }
+
         }
         private void ShowProductDetail(Browny selectedBrownies)
         {
@@ -188,13 +223,49 @@ namespace OrderTrack.view.UserControls
 
         private void btnKeranjang_Click(object sender, EventArgs e)
         {
-            UC_keranjang keranjang = new UC_keranjang();
+            _keranjangItems.Clear();
+            _quantityKeranjang.Clear();
 
+            bool adaProduk = false;
+
+            foreach (var kvp in _quantityControls)
+            {
+                int idBrownies = kvp.Key;
+                QuantityBox qtyBox = kvp.Value;
+                int qty = qtyBox.Value;
+
+                if (qty > 0)
+                {
+                    var brownies = _dbcontext.Brownies.FirstOrDefault(b => b.IdBrownies == idBrownies);
+                    if (brownies != null)
+                    {
+                        _keranjangItems.Add(brownies);
+                        _quantityKeranjang[idBrownies] = qty;
+                        adaProduk = true;
+                    }
+                }
+            }
+
+            if (!adaProduk)
+            {
+                MessageBox.Show("Tambahkan quantity di produk yang mau kamu beli yaa", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            MessageBox.Show("Yeay! brownies kamu sudah masuk keranjang, \njangan lupa checkout yaa :)", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            UC_keranjang keranjang = new UC_keranjang();
             NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(keranjang, true, true));
         }
-        private void btnMakeOrder_Click(object sender, EventArgs e)
+
+        public static List<Browny> GetKeranjangItems()
         {
-            MessageBox.Show("Pesanan telah masuk ke keranjang silahkan cek keranjang anda", "Pesanan Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return _keranjangItems;
+        }
+
+        public static Dictionary<int, int> GetQuantityKeranjang()
+        {
+            return _quantityKeranjang;
         }
     }
 }
