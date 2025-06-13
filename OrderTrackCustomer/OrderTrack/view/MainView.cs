@@ -76,7 +76,7 @@ namespace OrderTrack.view
         }
         private void OnNavigateToUserControlRequested(object sender, NavigationEventArgs e)
         {
-            sideBar.Visible = e.RequireSideBar;
+            //sideBar.Visible = e.RequireSideBar;
             detail_pesanan.Visible = e.RequireDetail;
             if (e.userControl is HomePageUserControl homepageUC)
             {
