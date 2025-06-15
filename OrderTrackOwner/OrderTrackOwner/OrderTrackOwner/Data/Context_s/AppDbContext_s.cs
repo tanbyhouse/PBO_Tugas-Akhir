@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 
 namespace OrderTrackOwner.Data.Context_s;
 
@@ -31,12 +32,17 @@ public partial class AppDbContext_s : DbContext
 
     public virtual DbSet<VarianBrowny> VarianBrownies { get; set; }
 
+    public DbSet<Pesanan> Pesanan { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseNpgsql("Host=ep-sweet-heart-a881gavm-pooler.eastus2.azure.neon.tech;Database=neondb;Username=neondb_owner;Password=npg_qQRVHWN3cSz4;SSL Mode=Require;Trust Server Certificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder
+            .HasPostgresEnum<StatusPesanan>("status_pesanan_enum");
+        base.OnModelCreating(modelBuilder);
         modelBuilder
             .HasPostgresEnum("status_pelanggan_enum", new[] { "active", "completed_order", "archived" })
             .HasPostgresEnum("status_pesanan_enum", new[] { "pending", "diproses", "dikirim", "diterima", "dibatalkan", "ditolak" });
@@ -175,6 +181,8 @@ public partial class AppDbContext_s : DbContext
                 .HasColumnName("nomor_hp");
         });
 
+        modelBuilder.HasPostgresEnum<StatusPesanan>();
+
         modelBuilder.Entity<Pesanan>(entity =>
         {
             entity.HasKey(e => e.IdPesanan).HasName("pesanan_pkey");
@@ -191,6 +199,12 @@ public partial class AppDbContext_s : DbContext
                 .HasForeignKey(d => d.IdPelanggan)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasConstraintName("fk_pesanan_id_pelanggan");
+            entity.Property(e => e.StatusPesanan)
+                .HasColumnName("status_pesanan")
+                .HasConversion(
+                    v => v.ToString(),
+                    v => (StatusPesanan)Enum.Parse(typeof(StatusPesanan), v))
+                .HasDefaultValue(StatusPesanan.pending);
         });
 
         modelBuilder.Entity<VarianBrowny>(entity =>
@@ -207,6 +221,14 @@ public partial class AppDbContext_s : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("nama_varian");
         });
+        modelBuilder.Entity<Pelanggan>()
+            .Property(e => e.StatusPelanggan)
+            .HasConversion<string>(); // Ini penting untuk Npgsql agar disimpan sebagai string
+
+        // Konfigurasi untuk enum StatusPesanan
+        modelBuilder.Entity<Pesanan>()
+            .Property(e => e.StatusPesanan)
+            .HasConversion<string>();
 
         OnModelCreatingPartial(modelBuilder);
     }
