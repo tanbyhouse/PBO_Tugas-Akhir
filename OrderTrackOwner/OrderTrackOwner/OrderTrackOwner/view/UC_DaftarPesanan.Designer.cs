@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dataGridViewPesanan = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPesanan).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewPesanan
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(818, 497);
-            dataGridView1.TabIndex = 0;
+            dataGridViewPesanan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPesanan.Dock = DockStyle.Fill;
+            dataGridViewPesanan.Location = new Point(0, 0);
+            dataGridViewPesanan.Name = "Daftar Pesanan Owner";
+            dataGridViewPesanan.RowHeadersWidth = 51;
+            dataGridViewPesanan.Size = new Size(818, 497);
+            dataGridViewPesanan.TabIndex = 0;
             // 
             // UC_DaftarPesanan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewPesanan);
             Name = "UC_DaftarPesanan";
             Size = new Size(818, 497);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPesanan).EndInit();
+            
+
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewPesanan;
     }
 }
