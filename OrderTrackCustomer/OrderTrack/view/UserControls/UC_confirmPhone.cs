@@ -27,8 +27,14 @@ namespace OrderTrack.view.UserControls
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            OrderConfirmPopUp popUp = new OrderConfirmPopUp();
-            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(popUp, false, false, true));
+            HomePageUserControl home = new HomePageUserControl();
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(home, false, false));
+        }
+
+        private void btnNext_Click_1(object sender, EventArgs e)
+        {
+            HomePageUserControl home = new HomePageUserControl();
+            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(home, false, false));
         }
     }
 }

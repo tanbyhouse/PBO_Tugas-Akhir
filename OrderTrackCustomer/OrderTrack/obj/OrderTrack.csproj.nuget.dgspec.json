@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj": {}
+    "D:\\GITHUB\\OrderTrackFix\\Backup\\fix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj": {}
   },
   "projects": {
-    "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj": {
+    "D:\\GITHUB\\OrderTrackFix\\Backup\\fix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj",
+        "projectUniqueName": "D:\\GITHUB\\OrderTrackFix\\Backup\\fix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj",
         "projectName": "OrderTrack",
-        "projectPath": "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj",
+        "projectPath": "D:\\GITHUB\\OrderTrackFix\\Backup\\fix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\OrderTrack.csproj",
         "packagesPath": "C:\\Users\\ZAFARELL\\.nuget\\packages\\",
-        "outputPath": "D:\\GITHUB\\OrderTrackFix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\obj\\",
+        "outputPath": "D:\\GITHUB\\OrderTrackFix\\Backup\\fix\\PBO_Tugas-Akhir\\OrderTrackCustomer\\OrderTrack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

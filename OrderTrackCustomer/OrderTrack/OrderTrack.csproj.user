@@ -10,22 +10,10 @@
     <Compile Update="view\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="view\UserControls\alamatUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="view\UserControls\HomePageUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="view\UserControls\nameUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="view\UserControls\OrderConfirmPopUp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="view\UserControls\phoneUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="view\UserControls\RegisterUserControl.cs">
+    <Compile Update="view\UserControls\QuantityBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="view\UserControls\UC_confirmAddress.cs">

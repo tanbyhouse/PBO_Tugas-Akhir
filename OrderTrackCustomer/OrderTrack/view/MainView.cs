@@ -7,136 +7,106 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OrderTrack.view.UserControls;
-using OrderTrack.utils;
+using OrderTrack.view.UserControls; // Penting: Mengimpor namespace untuk UserControl Anda
+using OrderTrack.utils; // Penting: Mengimpor namespace untuk NavigationEventArgs
 
-namespace OrderTrack.view
+namespace OrderTrack.view // Namespace yang sama dengan MainView.Designer.cs
 {
-    public partial class MainView : Form
+    public partial class MainView : Form // Keyword 'partial' dan pewarisan dari Form
     {
+        // -----------------------------------------------------------------------
+        // Bagian Konstruktor
+        // -----------------------------------------------------------------------
         public MainView()
         {
-            InitializeComponent();
-
-            ShowInitialUserControl();
+            InitializeComponent(); // Wajib dipanggil!
+            ShowInitialUserControl(); // Memulai aplikasi dengan UserControl awal
         }
+
+        // -----------------------------------------------------------------------
+        // Metode Inisialisasi UserControl Awal
+        // -----------------------------------------------------------------------
         private void ShowInitialUserControl()
         {
-            RegisterUserControl registerUserControl = new RegisterUserControl();
-            OnNavigateToUserControlRequested(this, new NavigationEventArgs(registerUserControl, false, false, false));
+            HomePageUserControl HomePage = new HomePageUserControl(); // Membuat instance HomePageUserControl
+            // Memanggil metode untuk menavigasi ke HomePageUserControl
+            // Parameter: sender (this), NavigationEventArgs (HomePage, tidak overlay, tidak require detail, tidak from popup)
+            OnNavigateToUserControlRequested(this, new NavigationEventArgs(HomePage, false, false));
         }
+
+        // -----------------------------------------------------------------------
+        // Metode Publik untuk Menampilkan UserControl
+        // -----------------------------------------------------------------------
         public void ShowUserControl(UserControl newControl, bool isOverlay = false)
         {
+            // Pengecekan keamanan: Pastikan pnlContent sudah diinisialisasi
             if (pnlContent == null)
             {
                 MessageBox.Show("Error: pnlContent is not initialized.");
-                return;
+                return; // Keluar dari metode jika pnlContent null
             }
-
-            if (isOverlay) // Jika ini BUKAN overlay, hapus kontrol yang lama
+            // Nonaktifkan UserControl yang ada di belakang (jika ada)
+            if (pnlContent.Controls.Count > 0)
             {
-                // Ganti loop while dengan loop for yang lebih aman atau cukup hapus semua secara langsung
-                // Cara paling aman untuk menghapus semua kontrol:
-                while (pnlContent.Controls.Count > 0)
-                {
-                    // Ambil kontrol pertama, dispose, lalu hapus dari koleksi
-                    Control controlToRemove = pnlContent.Controls[0];
-                    pnlContent.Controls.RemoveAt(0);
-                    controlToRemove.Dispose(); // Penting untuk melepaskan sumber daya
-                }
+                pnlContent.Controls[0].Enabled = false; // Asumsi kontrol utama selalu di index 0
             }
-            else // Jika ini overlay
-            {
-                // Nonaktifkan UserControl di belakang overlay (jika ada)
-                if (pnlContent.Controls.Count > 0)
-                {
-                    // Asumsi UserControl yang utama ada di index 0
-                    pnlContent.Controls[0].Enabled = false;
-                }
-
-                // Hapus semua overlay yang mungkin sudah ada
-                // Loop mundur agar penghapusan tidak mengganggu indeks iterasi
-                for (int i = pnlContent.Controls.Count - 1; i >= 0; i--)
-                {
-                    // Hanya hapus jika itu adalah UserControl overlay (misal UC_OrderConfirmationPopup)
-                    // ATAU TransparentPanel yang kamu gunakan sebagai container overlay
-                    if (pnlContent.Controls[i] is OrderConfirmPopUp || pnlContent.Controls[i] is TransparentPanel)
-                    {
-                        Control controlToRemove = pnlContent.Controls[i];
-                        pnlContent.Controls.RemoveAt(i);
-                        controlToRemove.Dispose();
-                    }
-                }
-            }
-
-            // Tambahkan kontrol baru
-            newControl.Dock = DockStyle.Fill;
-            pnlContent.Controls.Add(newControl);
-            newControl.BringToFront(); // Pastikan kontrol baru di depan
+            // Menambahkan kontrol baru ke pnlContent
+            newControl.Dock = DockStyle.Fill; // Mengisi seluruh area pnlContent
+            pnlContent.Controls.Add(newControl); // Menambahkan kontrol baru
+            newControl.BringToFront(); // Memastikan kontrol baru tampil di paling depan
         }
+        // -----------------------------------------------------------------------
+        // Metode Handler Event Navigasi
+        // -----------------------------------------------------------------------
         private void OnNavigateToUserControlRequested(object sender, NavigationEventArgs e)
         {
-            sideBar.Visible = e.RequireSideBar;
-            detail_pesanan.Visible = e.RequireDetail;
+            pnlSummaryKeranjang.Visible = e.RequireSideBar;
+
             if (e.userControl is HomePageUserControl homepageUC)
             {
-                homepageUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
+                // Cast (as) berhasil, sekarang kita bisa mengakses properti atau metode spesifik homepageUC.
+                homepageUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+                // Ini memastikan bahwa ketika HomePageUserControl ingin menavigasi, ia akan memanggil kembali
+                // metode ini di MainView.
             }
-            else if (e.userControl is RegisterUserControl registerUC)
+            else if (e.userControl is UC_confirmName nameUC) // Asumsi ini adalah UserControl untuk input nama
             {
-                registerUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+                nameUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is nameUserControl nameUC)
-            {
-                nameUC.NavigateTouserControlRequested += OnNavigateToUserControlRequested;
-            }
-            else if (e.userControl is alamatUserControl addressUC)
+            else if (e.userControl is UC_confirmAddress addressUC) // Asumsi ini adalah UserControl untuk input alamat
             {
                 addressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is phoneUserControl phoneUC)
+            else if (e.userControl is UC_confirmPhone phoneUC) // Asumsi ini adalah UserControl untuk input telepon
             {
                 phoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is UC_produk UCproduk)
+            else if (e.userControl is UC_produk UCproduk) // UserControl untuk daftar produk
             {
                 UCproduk.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is UC_keranjang keranjangUC)
+            else if (e.userControl is UC_keranjang keranjangUC) // UserControl untuk detail keranjang
             {
                 keranjangUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
+                // Di sini Anda juga bisa menambahkan handler untuk event update keranjang dari UC_keranjang
+                // keranjangUC.CartSummaryUpdated += (s, args) => UpdateCartSummary(args); // Contoh
             }
-            else if (e.userControl is UC_confirmName confirmnameUC)
+            else if (e.userControl is UC_confirmName confirmnameUC) // UserControl untuk konfirmasi nama
             {
                 confirmnameUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is UC_confirmAddress confirmAddressUC)
+            else if (e.userControl is UC_confirmAddress confirmAddressUC) // UserControl untuk konfirmasi alamat
             {
                 confirmAddressUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is UC_confirmPhone confirmPhoneUC)
+            else if (e.userControl is UC_confirmPhone confirmPhoneUC) // UserControl untuk konfirmasi telepon
             {
                 confirmPhoneUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
             }
-            else if (e.userControl is OrderConfirmPopUp popupUC)
-            {
-                popupUC.NavigateToUserControlRequested += OnNavigateToUserControlRequested;
-                // PENTING: Tambahkan handler untuk event PopupClosed dari overlay
-                popupUC.PopupClosed += (s, args) =>
-                {
-                    // Hapus overlay dari pnlContent
-                    pnlContent.Controls.Remove(popupUC);
-                    popupUC.Dispose();
 
-                    // Aktifkan kembali UserControl di belakangnya (jika sebelumnya dinonaktifkan)
-                    if (pnlContent.Controls.Count > 0)
-                    {
-                        // Asumsi UserControl utama ada di index 0
-                        pnlContent.Controls[0].Enabled = true;
-                    }
-                };
-            }
-            ShowUserControl(e.userControl, e.IsOverLay);
+            // 3. Menampilkan UserControl yang diminta
+            // Setelah berlangganan event (jika perlu), panggil ShowUserControl untuk benar-benar menampilkan kontrol.
+            ShowUserControl(e.userControl);
         }
     }
 }

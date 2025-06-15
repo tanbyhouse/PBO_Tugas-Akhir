@@ -1,17 +1,17 @@
-﻿namespace OrderTrack.view
+﻿namespace OrderTrack.view // Namespace yang sama dengan MainView.cs
 {
-    partial class MainView
+    partial class MainView // Keyword 'partial'
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private System.ComponentModel.IContainer components = null; // Deklarasi Variabel Anggota 'components'
 
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        protected override void Dispose(bool disposing) // Metode 'Dispose'
         {
             if (disposing && (components != null))
             {
@@ -20,145 +20,137 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows Form Designer generated code // Region untuk kode desainer
 
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent() // Metode 'InitializeComponent'
         {
             pnlContent = new Panel();
-            sideBar = new Panel();
-            phoneValue = new Label();
-            addressValue = new Label();
-            nameValue = new Label();
-            detail_pesanan = new Panel();
-            labelTotal = new Label();
-            labelOngkir = new Label();
-            labelPajak = new Label();
-            labelSubTotal = new Label();
-            labelDetailPesanan = new Label();
-            sideBar.SuspendLayout();
-            detail_pesanan.SuspendLayout();
+            pnlSummaryKeranjang = new Panel();
+            lblTotalValue = new Label();
+            lblOngkirValue = new Label();
+            lblPajakValue = new Label();
+            lblSubTotalValue = new Label();
+            lblTotalStatic = new Label();
+            lblOngkirStatic = new Label();
+            lblPajakStatic = new Label();
+            lblSubTotalStatic = new Label();
+            lblResiPembayaran = new Label();
+            pnlContent.SuspendLayout();
+            pnlSummaryKeranjang.SuspendLayout();
             SuspendLayout();
             // 
             // pnlContent
             // 
+            pnlContent.Controls.Add(pnlSummaryKeranjang);
             pnlContent.Dock = DockStyle.Fill;
             pnlContent.Location = new Point(0, 0);
             pnlContent.Name = "pnlContent";
             pnlContent.Size = new Size(800, 450);
             pnlContent.TabIndex = 0;
             // 
-            // sideBar
+            // pnlSummaryKeranjang
             // 
-            sideBar.BackColor = SystemColors.ActiveCaptionText;
-            sideBar.Controls.Add(phoneValue);
-            sideBar.Controls.Add(addressValue);
-            sideBar.Controls.Add(nameValue);
-            sideBar.Dock = DockStyle.Left;
-            sideBar.Location = new Point(0, 0);
-            sideBar.Name = "sideBar";
-            sideBar.Size = new Size(199, 450);
-            sideBar.TabIndex = 0;
+            pnlSummaryKeranjang.BackColor = Color.FromArgb(215, 206, 191);
+            pnlSummaryKeranjang.Controls.Add(lblTotalValue);
+            pnlSummaryKeranjang.Controls.Add(lblOngkirValue);
+            pnlSummaryKeranjang.Controls.Add(lblPajakValue);
+            pnlSummaryKeranjang.Controls.Add(lblSubTotalValue);
+            pnlSummaryKeranjang.Controls.Add(lblTotalStatic);
+            pnlSummaryKeranjang.Controls.Add(lblOngkirStatic);
+            pnlSummaryKeranjang.Controls.Add(lblPajakStatic);
+            pnlSummaryKeranjang.Controls.Add(lblSubTotalStatic);
+            pnlSummaryKeranjang.Controls.Add(lblResiPembayaran);
+            pnlSummaryKeranjang.Dock = DockStyle.Right;
+            pnlSummaryKeranjang.Location = new Point(566, 0);
+            pnlSummaryKeranjang.Name = "pnlSummaryKeranjang";
+            pnlSummaryKeranjang.Size = new Size(234, 450);
+            pnlSummaryKeranjang.TabIndex = 7;
             // 
-            // phoneValue
+            // lblTotalValue
             // 
-            phoneValue.AutoSize = true;
-            phoneValue.ForeColor = Color.White;
-            phoneValue.Location = new Point(75, 227);
-            phoneValue.Name = "phoneValue";
-            phoneValue.Size = new Size(80, 20);
-            phoneValue.TabIndex = 2;
-            phoneValue.Text = "Nomor Hp";
-            phoneValue.TextAlign = ContentAlignment.MiddleCenter;
+            lblTotalValue.AutoSize = true;
+            lblTotalValue.Location = new Point(120, 352);
+            lblTotalValue.Name = "lblTotalValue";
+            lblTotalValue.Size = new Size(42, 20);
+            lblTotalValue.TabIndex = 12;
+            lblTotalValue.Text = "Rp. 0";
             // 
-            // addressValue
+            // lblOngkirValue
             // 
-            addressValue.AutoSize = true;
-            addressValue.ForeColor = Color.White;
-            addressValue.Location = new Point(75, 175);
-            addressValue.Name = "addressValue";
-            addressValue.Size = new Size(57, 20);
-            addressValue.TabIndex = 1;
-            addressValue.Text = "Alamat";
-            addressValue.TextAlign = ContentAlignment.MiddleCenter;
+            lblOngkirValue.AutoSize = true;
+            lblOngkirValue.Location = new Point(120, 178);
+            lblOngkirValue.Name = "lblOngkirValue";
+            lblOngkirValue.Size = new Size(42, 20);
+            lblOngkirValue.TabIndex = 11;
+            lblOngkirValue.Text = "Rp. 0";
             // 
-            // nameValue
+            // lblPajakValue
             // 
-            nameValue.AutoSize = true;
-            nameValue.ForeColor = Color.White;
-            nameValue.Location = new Point(75, 125);
-            nameValue.Name = "nameValue";
-            nameValue.Size = new Size(49, 20);
-            nameValue.TabIndex = 0;
-            nameValue.Text = "Nama";
-            nameValue.TextAlign = ContentAlignment.MiddleCenter;
+            lblPajakValue.AutoSize = true;
+            lblPajakValue.Location = new Point(120, 135);
+            lblPajakValue.Name = "lblPajakValue";
+            lblPajakValue.Size = new Size(42, 20);
+            lblPajakValue.TabIndex = 10;
+            lblPajakValue.Text = "Rp. 0";
             // 
-            // detail_pesanan
+            // lblSubTotalValue
             // 
-            detail_pesanan.BackColor = SystemColors.AppWorkspace;
-            detail_pesanan.Controls.Add(labelTotal);
-            detail_pesanan.Controls.Add(labelOngkir);
-            detail_pesanan.Controls.Add(labelPajak);
-            detail_pesanan.Controls.Add(labelSubTotal);
-            detail_pesanan.Controls.Add(labelDetailPesanan);
-            detail_pesanan.Dock = DockStyle.Right;
-            detail_pesanan.Location = new Point(515, 0);
-            detail_pesanan.Name = "detail_pesanan";
-            detail_pesanan.Size = new Size(285, 450);
-            detail_pesanan.TabIndex = 4;
+            lblSubTotalValue.AutoSize = true;
+            lblSubTotalValue.Location = new Point(120, 94);
+            lblSubTotalValue.Name = "lblSubTotalValue";
+            lblSubTotalValue.Size = new Size(42, 20);
+            lblSubTotalValue.TabIndex = 9;
+            lblSubTotalValue.Text = "Rp. 0";
             // 
-            // labelTotal
+            // lblTotalStatic
             // 
-            labelTotal.AutoSize = true;
-            labelTotal.BackColor = Color.White;
-            labelTotal.Location = new Point(19, 342);
-            labelTotal.Name = "labelTotal";
-            labelTotal.Size = new Size(42, 20);
-            labelTotal.TabIndex = 4;
-            labelTotal.Text = "Total";
+            lblTotalStatic.AutoSize = true;
+            lblTotalStatic.Location = new Point(12, 352);
+            lblTotalStatic.Name = "lblTotalStatic";
+            lblTotalStatic.Size = new Size(49, 20);
+            lblTotalStatic.TabIndex = 8;
+            lblTotalStatic.Text = "Total :";
             // 
-            // labelOngkir
+            // lblOngkirStatic
             // 
-            labelOngkir.AutoSize = true;
-            labelOngkir.BackColor = Color.White;
-            labelOngkir.Location = new Point(19, 149);
-            labelOngkir.Name = "labelOngkir";
-            labelOngkir.Size = new Size(98, 20);
-            labelOngkir.TabIndex = 3;
-            labelOngkir.Text = "Ongkos Kirim";
+            lblOngkirStatic.AutoSize = true;
+            lblOngkirStatic.Location = new Point(12, 178);
+            lblOngkirStatic.Name = "lblOngkirStatic";
+            lblOngkirStatic.Size = new Size(105, 20);
+            lblOngkirStatic.TabIndex = 7;
+            lblOngkirStatic.Text = "Ongkos Kirim :";
             // 
-            // labelPajak
+            // lblPajakStatic
             // 
-            labelPajak.AutoSize = true;
-            labelPajak.BackColor = Color.White;
-            labelPajak.Location = new Point(19, 112);
-            labelPajak.Name = "labelPajak";
-            labelPajak.Size = new Size(43, 20);
-            labelPajak.TabIndex = 2;
-            labelPajak.Text = "Pajak";
+            lblPajakStatic.AutoSize = true;
+            lblPajakStatic.Location = new Point(12, 135);
+            lblPajakStatic.Name = "lblPajakStatic";
+            lblPajakStatic.Size = new Size(50, 20);
+            lblPajakStatic.TabIndex = 6;
+            lblPajakStatic.Text = "Pajak :";
             // 
-            // labelSubTotal
+            // lblSubTotalStatic
             // 
-            labelSubTotal.AutoSize = true;
-            labelSubTotal.BackColor = Color.White;
-            labelSubTotal.Location = new Point(19, 75);
-            labelSubTotal.Name = "labelSubTotal";
-            labelSubTotal.Size = new Size(65, 20);
-            labelSubTotal.TabIndex = 1;
-            labelSubTotal.Text = "Subtotal";
+            lblSubTotalStatic.AutoSize = true;
+            lblSubTotalStatic.Location = new Point(12, 94);
+            lblSubTotalStatic.Name = "lblSubTotalStatic";
+            lblSubTotalStatic.Size = new Size(78, 20);
+            lblSubTotalStatic.TabIndex = 5;
+            lblSubTotalStatic.Text = "Sub Total :";
             // 
-            // labelDetailPesanan
+            // lblResiPembayaran
             // 
-            labelDetailPesanan.AutoSize = true;
-            labelDetailPesanan.BackColor = Color.White;
-            labelDetailPesanan.Location = new Point(78, 17);
-            labelDetailPesanan.Name = "labelDetailPesanan";
-            labelDetailPesanan.Size = new Size(106, 20);
-            labelDetailPesanan.TabIndex = 0;
-            labelDetailPesanan.Text = "Detail Pesanan";
+            lblResiPembayaran.AutoSize = true;
+            lblResiPembayaran.Font = new Font("Bahnschrift Condensed", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResiPembayaran.Location = new Point(25, 8);
+            lblResiPembayaran.Name = "lblResiPembayaran";
+            lblResiPembayaran.Size = new Size(187, 36);
+            lblResiPembayaran.TabIndex = 4;
+            lblResiPembayaran.Text = "Resi Pembayaran";
             // 
             // MainView
             // 
@@ -167,31 +159,30 @@
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new Size(800, 450);
-            Controls.Add(detail_pesanan);
-            Controls.Add(sideBar);
             Controls.Add(pnlContent);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MainView";
             Text = "MainView";
-            sideBar.ResumeLayout(false);
-            sideBar.PerformLayout();
-            detail_pesanan.ResumeLayout(false);
-            detail_pesanan.PerformLayout();
+            pnlContent.ResumeLayout(false);
+            pnlSummaryKeranjang.ResumeLayout(false);
+            pnlSummaryKeranjang.PerformLayout();
             ResumeLayout(false);
         }
 
-        #endregion
+        #endregion // Akhir region kode desainer
 
+        // --- Deklarasi Variabel Anggota untuk Kontrol UI ---
+        // Ini adalah deklarasi kontrol-kontrol yang akan diakses di MainView.cs
         private Panel pnlContent;
-        private Panel sideBar;
-        private Label nameValue;
-        private Label phoneValue;
-        private Label addressValue;
-        private Panel detail_pesanan;
-        private Label labelTotal;
-        private Label labelOngkir;
-        private Label labelPajak;
-        private Label labelSubTotal;
-        private Label labelDetailPesanan;
+        private Panel pnlSummaryKeranjang;
+        private Label lblTotalValue;
+        private Label lblOngkirValue;
+        private Label lblPajakValue;
+        private Label lblSubTotalValue;
+        private Label lblTotalStatic;
+        private Label lblOngkirStatic;
+        private Label lblPajakStatic;
+        private Label lblSubTotalStatic;
+        private Label lblResiPembayaran;
     }
 }
