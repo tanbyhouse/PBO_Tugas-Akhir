@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="utils\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="utils\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -25,10 +28,25 @@
     <Compile Update="view\UserControls\UC_confirmPhone.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="view\UserControls\UC_detailPesanan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="view\UserControls\UC_keranjang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="view\UserControls\UC_produk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="view\UserControls\UC_produk.Detail.Design.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="view\UserControls\UC_produk.emptySideBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="view\UserControls\UC_produk.load.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="view\UserControls\UC_produk.SideBar.Design.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

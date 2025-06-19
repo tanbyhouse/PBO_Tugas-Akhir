@@ -1,54 +1,46 @@
-﻿    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Drawing;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Forms;
-
-    namespace OrderTrack.view.UserControls
+﻿namespace OrderTrack.view.UserControls
+{
+    public partial class QuantityBox : UserControl
     {
-        public partial class QuantityBox : UserControl
+        public event EventHandler ValueChanged; // Event yang dipicu saat nilai berubah
+        public int Minimum { get; set; } = 0;   // Properti untuk nilai minimum
+        public int Maximum { get; set; } = 200; // Properti untuk nilai maksimum
+
+        public int Value // Properti utama untuk mendapatkan/mengatur nilai kuantitas
         {
-            public event EventHandler ValueChanged;
-            public int Minimum { get; set; } = 0;
-            public int Maximum { get; set; } = 200;
-
-            public int Value
+            get => int.Parse(lblValue.Text); // Mengambil nilai dari Label
+            set
             {
-                get => int.Parse(lblValue.Text);
-                set
-                {
-                    int val = Math.Max(Minimum, Math.Min(Maximum, value));
-                    lblValue.Text = val.ToString();
-                    btnMinus.Enabled = val > Minimum;
-                    btnPlus.Enabled = val < Maximum;
-                }
+                // Memastikan nilai berada di antara Minimum dan Maximum
+                int val = Math.Max(Minimum, Math.Min(Maximum, value));
+                lblValue.Text = val.ToString(); // Memperbarui tampilan Label
+                btnMinus.Enabled = val > Minimum; // Mengaktifkan/menonaktifkan tombol Minus
+                btnPlus.Enabled = val < Maximum;   // Mengaktifkan/menonaktifkan tombol Plus
             }
-            public QuantityBox()
-            {
-                InitializeComponent();
-                Value = 0;
-            }
+        }
 
-            private void btnMinus_Click(object sender, EventArgs e)
-            {
-                if (Value > Minimum)
-                {
-                    Value--;
-                    ValueChanged?.Invoke(this, EventArgs.Empty);
-                }
-            }
+        public QuantityBox() // Konstruktor QuantityBox
+        {
+            InitializeComponent(); // Inisialisasi komponen UI dari designer
+            Value = 0;             // Mengatur nilai awal ke 0
+        }
 
-            private void btnPlus_Click(object sender, EventArgs e)
+        private void btnMinus_Click(object sender, EventArgs e) // Event handler untuk tombol Minus
+        {
+            if (Value > Minimum) // Cek agar tidak kurang dari minimum
             {
-                if (Value < Maximum)
-                {
-                    Value++;
-                    ValueChanged?.Invoke(this, EventArgs.Empty);
-                }
+                Value--; // Kurangi nilai
+                ValueChanged?.Invoke(this, EventArgs.Empty); // Picu event ValueChanged
+            }
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e) // Event handler untuk tombol Plus
+        {
+            if (Value < Maximum) // Cek agar tidak lebih dari maksimum
+            {
+                Value++; // Tambah nilai
+                ValueChanged?.Invoke(this, EventArgs.Empty); // Picu event ValueChanged
             }
         }
     }
+}

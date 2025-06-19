@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent() // Metode 'InitializeComponent'
         {
-            pnlContent = new Panel();
+            pnlHeader = new Panel();
             pnlSummaryKeranjang = new Panel();
             lblTotalValue = new Label();
             lblOngkirValue = new Label();
@@ -39,18 +39,18 @@
             lblPajakStatic = new Label();
             lblSubTotalStatic = new Label();
             lblResiPembayaran = new Label();
-            pnlContent.SuspendLayout();
+            pnlHeader.SuspendLayout();
             pnlSummaryKeranjang.SuspendLayout();
             SuspendLayout();
             // 
-            // pnlContent
+            // pnlHeader
             // 
-            pnlContent.Controls.Add(pnlSummaryKeranjang);
-            pnlContent.Dock = DockStyle.Fill;
-            pnlContent.Location = new Point(0, 0);
-            pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(800, 450);
-            pnlContent.TabIndex = 0;
+            pnlHeader.Controls.Add(pnlSummaryKeranjang);
+            pnlHeader.Dock = DockStyle.Fill;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(800, 450);
+            pnlHeader.TabIndex = 0;
             // 
             // pnlSummaryKeranjang
             // 
@@ -159,11 +159,11 @@
             AutoScroll = true;
             AutoSize = true;
             ClientSize = new Size(800, 450);
-            Controls.Add(pnlContent);
+            Controls.Add(pnlHeader);
             FormBorderStyle = FormBorderStyle.None;
             Name = "MainView";
             Text = "MainView";
-            pnlContent.ResumeLayout(false);
+            pnlHeader.ResumeLayout(false);
             pnlSummaryKeranjang.ResumeLayout(false);
             pnlSummaryKeranjang.PerformLayout();
             ResumeLayout(false);
@@ -173,7 +173,7 @@
 
         // --- Deklarasi Variabel Anggota untuk Kontrol UI ---
         // Ini adalah deklarasi kontrol-kontrol yang akan diakses di MainView.cs
-        private Panel pnlContent;
+        private Panel pnlHeader;
         private Panel pnlSummaryKeranjang;
         private Label lblTotalValue;
         private Label lblOngkirValue;

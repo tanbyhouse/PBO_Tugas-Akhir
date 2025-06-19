@@ -423,3 +423,5 @@ D:\GITHUB\OrderTrackFix\Backup\fix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack
 D:\GITHUB\OrderTrackFix\Backup\fix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.pdb
 D:\GITHUB\OrderTrackFix\Backup\fix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.genruntimeconfig.cache
 D:\GITHUB\OrderTrackFix\Backup\fix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\ref\OrderTrack.dll
+D:\GITHUB\OrderTrackFix\Backup\fix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.utils.BaseUserControl.resources
+D:\GITHUB\OrderTrackFix\Backup\fix\PBO_Tugas-Akhir\OrderTrackCustomer\OrderTrack\obj\Debug\net8.0-windows\OrderTrack.view.UserControls.UC_detailPesanan.resources

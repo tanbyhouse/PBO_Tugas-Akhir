@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_confirmPhone));
             phoneconfirmPanel = new Panel();
-            pictureBox2 = new PictureBox();
             btnNext = new Button();
             btnBack = new Button();
             confirmPhoneBox = new TextBox();
@@ -38,14 +37,12 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             phoneconfirmPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // phoneconfirmPanel
             // 
             phoneconfirmPanel.BackColor = Color.FromArgb(232, 227, 207);
-            phoneconfirmPanel.Controls.Add(pictureBox2);
             phoneconfirmPanel.Controls.Add(btnNext);
             phoneconfirmPanel.Controls.Add(btnBack);
             phoneconfirmPanel.Controls.Add(confirmPhoneBox);
@@ -57,17 +54,6 @@
             phoneconfirmPanel.Name = "phoneconfirmPanel";
             phoneconfirmPanel.Size = new Size(800, 451);
             phoneconfirmPanel.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(482, -132);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(532, 651);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 8;
-            pictureBox2.TabStop = false;
             // 
             // btnNext
             // 
@@ -156,7 +142,6 @@
             Size = new Size(800, 451);
             phoneconfirmPanel.ResumeLayout(false);
             phoneconfirmPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -169,7 +154,6 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private Button btnNext;
     }
 }

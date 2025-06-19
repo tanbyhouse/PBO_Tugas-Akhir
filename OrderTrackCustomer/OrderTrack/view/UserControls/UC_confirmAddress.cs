@@ -11,9 +11,8 @@ using OrderTrack.utils;
 
 namespace OrderTrack.view.UserControls
 {
-    public partial class UC_confirmAddress : UserControl
+    public partial class UC_confirmAddress : BaseUserControl
     {
-        public EventHandler<NavigationEventArgs> NavigateToUserControlRequested;
         public UC_confirmAddress()
         {
             InitializeComponent();
@@ -22,13 +21,13 @@ namespace OrderTrack.view.UserControls
         private void btnBack_Click(object sender, EventArgs e)
         {
             UC_confirmName confirmName = new UC_confirmName();
-            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(confirmName, false, true));
+            OnNavigateToUserControlRequested(new NavigationEventArgs(confirmName, true));
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             UC_confirmPhone uC_ConfirmPhone = new UC_confirmPhone();
-            NavigateToUserControlRequested?.Invoke(this, new NavigationEventArgs(uC_ConfirmPhone, false, true));
+            OnNavigateToUserControlRequested(new NavigationEventArgs(uC_ConfirmPhone, true));
         }
     }
 }

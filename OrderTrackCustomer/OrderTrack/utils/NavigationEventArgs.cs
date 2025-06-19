@@ -1,25 +1,17 @@
-﻿using System;
-using System.Windows.Forms; // Penting untuk kelas UserControl
-
+﻿// menyesuaikan assembly dari path folder nya yakni OrderTrack/utils
 namespace OrderTrack.utils
 {
     // EventArgs kustom untuk meneruskan informasi navigasi antar UserControl
-    // Kita akan tetap menggunakan RequireSideBar dan RequireDetail,
-    // tetapi MainView tidak akan lagi menggunakan RequireDetail untuk mengatur visibilitas pnlSummaryKeranjang-nya.
-    // Ini mungkin masih berguna untuk logika navigasi lain jika ada sidebar navigasi kiri utama.
     public class NavigationEventArgs : EventArgs
     {
-        public UserControl userControl { get; }
-        public bool RequireSideBar { get; }
-        public bool RequireDetail { get; }
-        public bool IsOverlay { get; }
-
-        public NavigationEventArgs(UserControl userControl, bool requireSideBar, bool requireDetail, bool isOverlay = false)
+        public UserControl userControl { get; } // penerapan enkapsulasi sebagai konsep OOP
+        public bool RequireSideBar { get; } // penerapan enkapsulasi sebagai konsep OOP
+        
+        // constructors yang digunakan saat objek dibuat dari class ini
+        public NavigationEventArgs(UserControl userControl, bool requireSideBar)
         {
             this.userControl = userControl;
             this.RequireSideBar = requireSideBar;
-            this.RequireDetail = requireDetail;
-            this.IsOverlay = isOverlay;
         }
     }
 }
